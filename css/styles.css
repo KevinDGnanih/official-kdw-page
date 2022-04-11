@@ -239,11 +239,11 @@ sup {
 }
 
 a {
-  color: #64a19d;
+  color: #C44B49;
   text-decoration: underline;
 }
 a:hover {
-  color: #50817e;
+  color: #C44B49;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -4056,7 +4056,7 @@ textarea.form-control-lg {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #64a19d;
+  color: #C44B49;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -4917,7 +4917,7 @@ textarea.form-control-lg {
 .page-link {
   position: relative;
   display: block;
-  color: #64a19d;
+  color: #C44B49;
   text-decoration: none;
   background-color: #fff;
   border: 1px solid #dee2e6;
@@ -4948,8 +4948,8 @@ textarea.form-control-lg {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: #64a19d;
-  border-color: #64a19d;
+  background-color: #C44B49;
+  border-color: #C44B49;
 }
 .page-item.disabled .page-link {
   color: #6c757d;
