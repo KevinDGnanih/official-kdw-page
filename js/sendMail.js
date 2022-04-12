@@ -3,13 +3,13 @@ function sendMail(contactForm) {
             "from_name": contactForm.name.value,
             "from_subject": contactForm.subject.value,
             "from_email": contactForm.emailaddress.value,
-            "message": contactForm.message.value
+            "message": contactForm.message.value,
         })
         .then(
             function (response) {
                 console.log("SUCCESS", response);
                 document.getElementById("submitSuccessMessage").innerHTML = `
-                Merci beaucoup, you submitted with success!`
+                <p>Merci beaucoup, you submitted with success!</p>`
                 alert("Thank you!");
             },
             function (error) {

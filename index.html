@@ -103,23 +103,21 @@
                         <!-- Subject + Email -->
                         <div class="row input-group-newsletter m-2">
                             <div class="col-auto"><input class="form-control" id="subject" type="text"
-                                    placeholder="SUBJECT" aria-label="Enter Subject..."
-                                    required/></div>
+                                    placeholder="SUBJECT" aria-label="Enter Subject..." required /></div>
 
-                            <div class="col"><input class="form-control" id="emailAddress" type="email"
-                                    placeholder="Enter email address..." aria-label="Enter email address..."
-                                    required/></div>
+                            <div class="col"><input class="form-control" id="emailAddress" type="email" name="emailaddress"
+                                    placeholder="Enter email address..." aria-label="Enter email address..." required />
+                            </div>
 
                         </div>
                         <!-- Message input-->
                         <div class="row input-group-newsletter m-2">
                             <div class="col">
                                 <textarea class="form-control" name="message" id="message" type="text"
-                                    aria-label="With textarea" placeholder="MESSAGE HERE..."
-                                    required></textarea>
+                                    aria-label="With textarea" placeholder="MESSAGE HERE..." required></textarea>
                             </div>
-                            <div class="col-auto"><button class="btn red-b" id=""
-                                    type="submit">Notify Me!</button></div>
+                            <div class="col-auto"><button class="btn red-b" id="" type="submit" value="submit">Notify Me!</button>
+                            </div>
                         </div>
                         <!-- Submit success message-->
                         <!---->
@@ -169,7 +167,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <script src="/js/sendMail.js"></script>
+    <script src="js/sendMail.js"></script>
 </body>
 
 </html>
