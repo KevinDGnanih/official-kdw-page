@@ -2,6 +2,29 @@
   background: #000;
 }
 
+.tour-section {
+  margin: 0;
+}
+
+.dates {
+  margin-top: 6%;
+  font-size: 23px;
+}
+
+.tickets {
+  float: right;
+  margin-top: 6%;
+  margin-right: 10%;
+}
+
+.table {
+  margin-bottom: 0 !important;
+}
+
+.table-dark {
+  /*background: black !important;*/
+}
+
 @charset "UTF-8";
 /*!
 * Start Bootstrap - Grayscale v7.0.5 (https://startbootstrap.com/theme/grayscale)
