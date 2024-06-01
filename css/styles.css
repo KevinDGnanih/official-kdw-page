@@ -11637,12 +11637,41 @@ body {
   }
 }
 
-.fa-spotify:hover,
-.fa-itunes:hover,
 .fa-amazon:hover,
-.fa-youtube:hover,
 .fa-deezer:hover {
   color: white;
+}
+
+.mx-2:hover .fa-spotify {
+  color: var(--bs-green);
+}
+
+.mx-2:hover .fa-youtube {
+  color: var(--bs-red);
+}
+
+.mx-2:hover .fa-itunes {
+  color: whitesmoke;
+}
+
+.mx-2:hover .fa-amazon {
+  color: var(--bs-orange);
+}
+
+.mx-2:hover .fa-deezer {
+  color: var(--bs-purple);
+}
+
+.mx-2:hover .fa-instagram {
+  color: var(--bs-pink);
+}
+
+.mx-2:hover .fa-facebook-f {
+  color: var(--bs-blue);
+}
+
+.mx-2:hover .fa-twitter {
+  color: turquoise;
 }
 
 .about-section {
@@ -11694,7 +11723,8 @@ body {
   background-attachment: scroll;
   background-size: cover;
 }
-.signup-section .form-signup input {
+.signup-section .form-signup input,
+.signup-section .form-signup textarea {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
   height: auto;
@@ -11752,4 +11782,16 @@ body {
 
 .w-r {
   color: #C44B49;
+}
+
+#subbtn {
+  transition: all 1s ease-in-out;
+  cursor: pointer !important;
+  height: 100%;
+}
+
+#subbtn:hover {
+  transform: scaleX(1.1);
+  color: #fff;
+  cursor: pointer;
 }
