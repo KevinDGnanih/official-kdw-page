@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Kevin Davy White - Music Links" />
+    <meta name="author" content="" />
+    <title>Kevin Davy White - Music Tree</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons -->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <!-- Core theme CSS -->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("Zwi4NAAEeFcFsUpET");
+        })();
+    </script>
+    <style>
+        .linktree-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .profile-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #C44B49;
+            margin: 0 auto 1rem;
+            overflow: hidden;
+            background: url('assets/img/xfact.jpeg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .profile-image i {
+            font-size: 3rem;
+            color: white;
+        }
+        
+        .link-button {
+            display: block;
+            width: 100%;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, rgba(100, 161, 157, 0.1), rgba(26, 26, 26, 0.9));
+            border: 2px solid #C44B49;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .link-button:hover {
+            background: linear-gradient(135deg, #C44B49, #4a7c79);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(100, 161, 157, 0.3);
+            color: white;
+        }
+        
+        .link-button i {
+            margin-right: 0.75rem;
+            font-size: 1.2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(100, 161, 157, 0.1);
+            border: 2px solid #C44B49;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #C44B49;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: #C44B49;
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(100, 161, 157, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(100, 161, 157, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 80%, rgba(100, 161, 157, 0.05) 0%, transparent 50%);
+            animation: float 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(100, 161, 157, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(100, 161, 157, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(100, 161, 157, 0); }
+        }
+
+        /* Modal Styles */
+        .modal-content {
+            background-color: #1a1a1a;
+            border: 2px solid #C44B49;
+            border-radius: 15px;
+        }
+        
+        .modal-header {
+            border-bottom: 1px solid #C44B49;
+        }
+        
+        .modal-title {
+            color: white;
+        }
+        
+        .btn-close {
+            filter: invert(1);
+        }
+        
+        .form-control {
+            background-color: rgba(100, 161, 157, 0.1);
+            border: 2px solid #C44B49;
+            color: white;
+            border-radius: 25px;
+        }
+        
+        .form-control:focus {
+            background-color: rgba(100, 161, 157, 0.2);
+            border-color: #64a19d;
+            color: white;
+            box-shadow: 0 0 0 0.2rem rgba(100, 161, 157, 0.25);
+        }
+        
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+
+<body id="page-top" class="bg-black">
+    <div class="animated-bg"></div>
+
+    <!-- Linktree Section -->
+    <section class="py-5" style="margin-top: 100px; min-height: 100vh;">
+        <div class="linktree-container">
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <div class="profile-image pulse">
+                    <i class="fas fa-music"></i>
+                </div>
+                <h2 class="text-white kdw-font mb-2">KEVIN DAVY<span class="w-r"> W</span>HITE</h2>
+                <p class="text-white-50 mb-0">Musician • Artist • Creator</p>
+            </div>
+
+            <!-- Tickets Links -->
+            <div class="links-section mb-4">
+                <a href="#" class="link-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-ticket-alt"></i>
+                    Manchester 08.11
+                </a>
+                <a href="#" class="link-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-ticket-alt"></i>
+                    London 14.11
+                </a>
+            </div>
+
+            <!-- Music Links -->
+            <div class="links-section">
+                <a href="https://open.spotify.com/artist/0agWEPfMTw1b4N97WslJqV" class="link-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-spotify"></i>
+                    Listen on Spotify
+                </a>
+
+                <a href="https://music.apple.com/gb/artist/kevin-davy-white/1084490116" class="link-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-apple"></i>
+                    Apple Music
+                </a>
+
+                <a href="#" class="link-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i>
+                    YouTube Channel
+                </a>
+
+                <a href="https://music.amazon.co.uk/artists/B01BUS3TAS/kevin-davy-white" class="link-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-amazon"></i>
+                    Amazon Music
+                </a>
+
+                <!--
+                <a href="#" class="link-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-calendar-alt"></i>
+                    Upcoming Shows
+                </a>
+                -->
+
+                <!--
+                <a href="#" class="link-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-tshirt"></i>
+                    Merchandise
+                </a>
+                -->
+
+                <a href="#" class="link-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-envelope"></i>
+                    Book Me
+                </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="https://www.instagram.com/kevindavywhite" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.twitter.com/kevindavywhite" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/kevindavywhite" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.tiktok.com/@kevindavywhite" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title kdw-font" id="bookingModalLabel">BOOK KEVIN DAVY<span class="w-r"> W</span>HITE</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bookingForm" onsubmit="return sendBookingMail(this);" role="form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="bookingName" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="bookingEmail" name="emailaddress" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="bookingSubject" name="subject" placeholder="Event Type (e.g., Wedding, Concert, Private Event)" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="bookingMessage" name="message" rows="4" placeholder="Tell me about your event - date, location, duration, budget, etc." required></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn red-b">Send Booking Request</button>
+                        </div>
+                        
+                        <!-- Success/Error Messages -->
+                        <div class="d-none mt-3" id="bookingSuccessMessage">
+                            <div class="text-center text-white">
+                                <div class="fw-bolder">Thank you! Your booking request has been sent successfully!</div>
+                            </div>
+                        </div>
+                        <div class="d-none mt-3" id="bookingErrorMessage">
+                            <div class="text-center text-danger">Oops! There was an error sending your message.</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    
+    <script>
+        // Your existing sendMail function for booking
+        function sendBookingMail(contactForm) {
+            emailjs.send("Gmail", "kdw", {
+                "from_name": contactForm.name.value,
+                "from_subject": "BOOKING REQUEST: " + contactForm.subject.value,
+                "from_email": contactForm.emailaddress.value,
+                "message": contactForm.message.value,
+            })
+            .then(
+                function (response) {
+                    console.log("SUCCESS", response);
+                    document.getElementById("bookingSuccessMessage").classList.remove("d-none");
+                    document.getElementById("bookingErrorMessage").classList.add("d-none");
+                    
+                    // Reset form after 3 seconds and close modal
+                    setTimeout(() => {
+                        contactForm.reset();
+                        document.getElementById("bookingSuccessMessage").classList.add("d-none");
+                        bootstrap.Modal.getInstance(document.getElementById('bookingModal')).hide();
+                    }, 3000);
+                },
+                function (error) {
+                    console.log("FAILED", error);
+                    document.getElementById("bookingErrorMessage").classList.remove("d-none");
+                    document.getElementById("bookingSuccessMessage").classList.add("d-none");
+                });
+
+            return false;
+        }
+
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const linkButtons = document.querySelectorAll('.link-button');
+            
+            linkButtons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px) scale(1.02)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
